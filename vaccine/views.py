@@ -86,9 +86,9 @@ def home(request):
     def send_to_tele(s1):
         final=telegram_url+s1
         requests.get(final) #sending message to telegram using url
-    while True:
-        checkAvailable()
-        time.sleep(600)
+    
+    checkAvailable()
+    #    time.sleep(600)
 
     
 
