@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 import time
 from datetime import date
-
+import os
 # Create your views here.
 
 def home(request):
@@ -13,9 +13,9 @@ def home(request):
 
 
 
-    #telegram api to send meassage 
+    #telegram api to send meassage 'https://api.telegram.org/bot1875712191:AAG5j_7H93w1zLM4PJ8GOzETQue1DK-8aj8/sendMessage?chat_id=-1001506215395&text='
     grpid="free_vaccine_slots_under18_bot"
-    telegram_url='https://api.telegram.org/bot1875712191:AAG5j_7H93w1zLM4PJ8GOzETQue1DK-8aj8/sendMessage?chat_id=-1001506215395&text='
+    telegram_url=os.environ['URL']
 
 
     #API url to fetch the data
