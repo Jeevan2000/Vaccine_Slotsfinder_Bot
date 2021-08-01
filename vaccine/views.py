@@ -18,11 +18,11 @@ def home(request):
     telegram_url=os.environ['URL']
 
 
-    #API url to fetch the data
+    #API url to fetch the data 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'
     URL = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id={}&date={}'.format(dist,today_date)
 
     header = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36'
+        os.environ['header']
     }
 
     # function to check if there are any available slots
