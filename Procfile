@@ -1,1 +1,1 @@
-web: gunicorn vaccine.wsgi --log-file -
+web: gunicorn CowinSlots.wsgi --log-file -
